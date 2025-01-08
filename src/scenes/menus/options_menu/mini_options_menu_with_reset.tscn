@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1204n45t1qk1"]
+
+[ext_resource type="PackedScene" uid="uid://vh1ucj2rfbby" path="res://addons/maaacks_game_template/base/scenes/menus/options_menu/mini_options_menu.tscn" id="1_v3bsu"]
+[ext_resource type="Theme" uid="uid://u5qh1r677ec2" path="res://src/assets/neon-wave-theme/neon-wave.tres" id="2_45a0a"]
+[ext_resource type="Script" path="res://src/scenes/menus/options_menu/mini_options_menu_with_reset.gd" id="2_te8wg"]
+[ext_resource type="PackedScene" uid="uid://b0poxchy25jl" path="res://src/scenes/menus/options_menu/game/reset_game_control/reset_game_control.tscn" id="3_prmpc"]
+
+[node name="MiniOptionsMenu" instance=ExtResource("1_v3bsu")]
+theme = ExtResource("2_45a0a")
+script = ExtResource("2_te8wg")
+
+[node name="ResetGameControl" parent="." index="3" instance=ExtResource("3_prmpc")]
+layout_mode = 2
+
+[connection signal="reset_confirmed" from="ResetGameControl" to="." method="_on_reset_game_control_reset_confirmed"]

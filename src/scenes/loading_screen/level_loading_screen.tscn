@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuxxwvwjcjfr"]
+
+[ext_resource type="PackedScene" uid="uid://cd0jbh4metflb" path="res://addons/maaacks_game_template/base/scenes/loading_screen/loading_screen.tscn" id="1_c7ju8"]
+[ext_resource type="Script" path="res://src/scenes/loading_screen/loading_screen.gd" id="2_bocsd"]
+[ext_resource type="Theme" uid="uid://u5qh1r677ec2" path="res://src/assets/neon-wave-theme/neon-wave.tres" id="3_ugpe8"]
+
+[node name="LevelLoadingScreen" instance=ExtResource("1_c7ju8")]
+script = ExtResource("2_bocsd")
+_in_progress = "Loading Level..."
+_in_progress_waiting = "Still Loading Level..."
+_in_progress_still_waiting = "Still Loading Level... (%d seconds)"
+_complete = "Loading Level Complete!"
+
+[node name="Control" parent="." index="0"]
+theme = ExtResource("3_ugpe8")

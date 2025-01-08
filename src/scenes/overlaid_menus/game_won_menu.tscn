@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://doxxtjn54xtdr"]
+
+[ext_resource type="PackedScene" uid="uid://4brssbq1ghsw" path="res://addons/maaacks_game_template/extras/scenes/overlaid_menus/game_won_menu.tscn" id="1_1uhqc"]
+[ext_resource type="Theme" uid="uid://u5qh1r677ec2" path="res://src/assets/neon-wave-theme/neon-wave.tres" id="2_ixmm4"]
+[ext_resource type="Script" path="res://src/scenes/overlaid_menus/game_won_menu.gd" id="2_yvwx0"]
+
+[node name="GameWonMenu" instance=ExtResource("1_1uhqc")]
+theme = ExtResource("2_ixmm4")
+script = ExtResource("2_yvwx0")

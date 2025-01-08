@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://l5d22s6ijgai"]
+
+[ext_resource type="PackedScene" uid="uid://cd0jbh4metflb" path="res://addons/maaacks_game_template/base/scenes/loading_screen/loading_screen.tscn" id="1_ewo4x"]
+[ext_resource type="Script" path="res://src/scenes/loading_screen/loading_screen_with_shader_caching.gd" id="2_d68m1"]
+[ext_resource type="Theme" uid="uid://u5qh1r677ec2" path="res://src/assets/neon-wave-theme/neon-wave.tres" id="3_bbd4l"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_klnwy"]
+
+[node name="LoadingScreen" instance=ExtResource("1_ewo4x")]
+script = ExtResource("2_d68m1")
+_spatial_shader_material_dir = ""
+_cache_shaders_scene = "res://src/scenes/game_scene/game_ui.tscn"
+_mesh = SubResource("QuadMesh_klnwy")
+_matching_extensions = Array[String]([".tres", ".material", ".res"])
+_ignore_subfolders = Array[String]([".", ".."])
+_shader_delay_timer = 0.1
+
+[node name="Control" parent="." index="0"]
+theme = ExtResource("3_bbd4l")
+
+[node name="SpatialShaderTypeCaches" type="Node3D" parent="." index="2"]
+unique_name_in_owner = true
+
+[node name="Camera3D" type="Camera3D" parent="SpatialShaderTypeCaches" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.408)
+current = true

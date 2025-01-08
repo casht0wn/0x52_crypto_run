@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6jsoi5gp3wbq"]
+
+[ext_resource type="Script" path="res://src/scenes/game_scene/utils/candlestick.gd" id="1_p1gt8"]
+
+[node name="Candlestick" type="Node2D"]
+script = ExtResource("1_p1gt8")
+candle_color = Color(0.176471, 0.886275, 0.901961, 1)
+
+[node name="CandleBody" type="ColorRect" parent="."]
+
+[node name="TopWick" type="ColorRect" parent="."]
+
+[node name="BottomWick" type="ColorRect" parent="."]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://wmctln7dxk1s"]
+
+[ext_resource type="PackedScene" uid="uid://cd0jbh4metflb" path="res://addons/maaacks_game_template/base/scenes/loading_screen/loading_screen.tscn" id="1_twg6r"]
+[ext_resource type="Script" path="res://src/scenes/loading_screen/loading_screen.gd" id="2_jqj85"]
+[ext_resource type="Theme" uid="uid://u5qh1r677ec2" path="res://src/assets/neon-wave-theme/neon-wave.tres" id="3_f7n6r"]
+
+[node name="LoadingScreen" instance=ExtResource("1_twg6r")]
+script = ExtResource("2_jqj85")
+
+[node name="Control" parent="." index="0"]
+theme = ExtResource("3_f7n6r")

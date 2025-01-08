@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxi2qcqt0di2c"]
+
+[ext_resource type="PackedScene" uid="uid://vh1ucj2rfbby" path="res://addons/maaacks_game_template/base/scenes/menus/options_menu/mini_options_menu.tscn" id="1_335h0"]
+[ext_resource type="Script" path="res://src/scenes/menus/options_menu/mini_options_menu.gd" id="2_2iw5q"]
+[ext_resource type="Theme" uid="uid://u5qh1r677ec2" path="res://src/assets/neon-wave-theme/neon-wave.tres" id="2_bq6hd"]
+
+[node name="MiniOptionsMenu" instance=ExtResource("1_335h0")]
+theme = ExtResource("2_bq6hd")
+script = ExtResource("2_2iw5q")
