@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd5hl6ww2acm0"]
+
+[ext_resource type="Texture2D" uid="uid://dg8dbdpx8owfb" path="res://src/assets/images/backgrounds/Vaporwave_Background_1920x1080.png" id="1_g3784"]
+[ext_resource type="FontFile" uid="uid://b04s2d1b53mbn" path="res://src/assets/fonts/Outrun future.otf" id="2_tp6i7"]
+[ext_resource type="FontFile" uid="uid://wmajw6iinw24" path="res://src/assets/fonts/Streamster.ttf" id="3_j64yh"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_g3784")
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -308.5
+offset_top = -420.0
+offset_right = 308.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.176471, 0.886275, 0.901961, 1)
+theme_override_colors/font_shadow_color = Color(0.968627, 0.0235294, 0.811765, 1)
+theme_override_colors/font_outline_color = Color(0.14902, 0.0784314, 0.278431, 1)
+theme_override_constants/shadow_offset_x = -16
+theme_override_constants/shadow_offset_y = 16
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("2_tp6i7")
+theme_override_font_sizes/font_size = 250
+text = "0x52"
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.5
+offset_top = -125.0
+offset_right = 262.5
+offset_bottom = 83.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.831373, 0, 0.470588, 1)
+theme_override_colors/font_shadow_color = Color(0.14902, 0.0784314, 0.278431, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("3_j64yh")
+theme_override_font_sizes/font_size = 125
+text = "Crypto Run"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.666, 0.666)

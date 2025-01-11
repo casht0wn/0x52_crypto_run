@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://src/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_t8l3s"]
 [ext_resource type="PackedScene" uid="uid://cokpjlpg7n3od" path="res://src/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_ao4ml"]
 [ext_resource type="PackedScene" uid="uid://brqqdsoyxbhx7" path="res://src/scenes/credits/credits.tscn" id="4_pedwk"]
-[ext_resource type="AudioStream" uid="uid://dpx12y25b7yoy" path="res://src/assets/audio/music/the-is-retrowave-276516.mp3" id="6_6vey2"]
+[ext_resource type="AudioStream" uid="uid://blp5tbp12ht1h" path="res://src/assets/audio/music/outrun-neon-dreams-80s-199668.mp3" id="6_637h4"]
 [ext_resource type="Texture2D" uid="uid://cprfpe08whyyf" path="res://src/assets/images/BasedTitleScreen.jpg" id="6_amv2l"]
 [ext_resource type="FontFile" uid="uid://b04s2d1b53mbn" path="res://src/assets/fonts/Outrun future.otf" id="6_vgedh"]
 [ext_resource type="Shader" path="res://src/shaders/crt.gdshader" id="7_4xghb"]
@@ -398,7 +398,7 @@ anim_player = NodePath("../MenuAnimationPlayer")
 parameters/conditions/intro_done = false
 
 [node name="BackgroundMusicPlayer" parent="." index="3"]
-stream = ExtResource("6_6vey2")
+stream = ExtResource("6_637h4")
 bus = &"Master"
 
 [node name="BackgroundTextureRect" parent="." index="4"]

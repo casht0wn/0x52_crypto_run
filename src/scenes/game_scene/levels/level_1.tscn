@@ -39,7 +39,7 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.3
 shader_parameter/vignette_opacity = 0.5
 
-[node name="Level" type="Node2D"]
+[node name="Level" type="Node2D" groups=["Level"]]
 script = ExtResource("1_uusph")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

@@ -1,21 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://cokpjlpg7n3od"]
+[gd_scene load_steps=7 format=3 uid="uid://cokpjlpg7n3od"]
 
 [ext_resource type="PackedScene" uid="uid://bvwl11s2p0hd" path="res://addons/maaacks_game_template/base/scenes/menus/options_menu/master_options_menu.tscn" id="1_heovu"]
-[ext_resource type="Theme" uid="uid://u5qh1r677ec2" path="res://src/assets/neon-wave-theme/neon-wave.tres" id="2_8st31"]
 [ext_resource type="Script" path="res://src/scenes/menus/options_menu/master_options_menu.gd" id="2_bc18i"]
-[ext_resource type="PackedScene" uid="uid://cjwoldgxplq6r" path="res://src/scenes/menus/options_menu/input/input_options_menu_with_mouse_sensitivity.tscn" id="3_hkc15"]
+[ext_resource type="PackedScene" uid="uid://bon8bgkpp0s62" path="res://src/scenes/menus/options_menu/input/input_options_menu.tscn" id="3_8dcst"]
 [ext_resource type="PackedScene" uid="uid://dgvvbav0ir5rh" path="res://src/scenes/menus/options_menu/audio/audio_options_menu.tscn" id="4_d1sgt"]
 [ext_resource type="PackedScene" uid="uid://dxh7m45mim7f3" path="res://src/scenes/menus/options_menu/video/video_options_menu_with_extras.tscn" id="5_y3n4n"]
 [ext_resource type="PackedScene" uid="uid://bf644ur48d73f" path="res://src/scenes/menus/options_menu/game/game_options_menu.tscn" id="6_ue5xx"]
 
 [node name="MasterOptionsMenu" instance=ExtResource("1_heovu")]
-theme = ExtResource("2_8st31")
 script = ExtResource("2_bc18i")
 
 [node name="TabContainer" parent="." index="0"]
 current_tab = 0
 
-[node name="Controls" parent="TabContainer" index="1" instance=ExtResource("3_hkc15")]
+[node name="Controls" parent="TabContainer" index="1" instance=ExtResource("3_8dcst")]
 layout_mode = 2
 metadata/_tab_index = 0
 

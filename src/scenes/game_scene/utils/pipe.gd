@@ -5,8 +5,14 @@ extends Node2D
 
 @onready var pipe_sprite: Sprite2D = get_node("Sprite2D")
 @onready var collision: CollisionShape2D = get_node("Area2D/CollisionShape2D")
-@onready var player: CharacterBody2D = get_tree().get_first_node_in_group("Player")
+
+@onready var level: Node2D = get_tree().get_first_node_in_group("Level")
+
+signal crashed
+
+func _ready() -> void:
+	connect("crashed", level.game_over)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		player.die()
+		crashed.emit()

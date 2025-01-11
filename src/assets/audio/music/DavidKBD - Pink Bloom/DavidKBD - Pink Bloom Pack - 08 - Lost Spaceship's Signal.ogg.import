@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ctqkw4bebjqxy"
+path="res://.godot/imported/DavidKBD - Pink Bloom Pack - 08 - Lost Spaceship's Signal.ogg-f090507f7b3b80dd7fd134ec77618479.oggvorbisstr"
+
+[deps]
+
+source_file="res://src/assets/audio/music/DavidKBD - Pink Bloom/DavidKBD - Pink Bloom Pack - 08 - Lost Spaceship's Signal.ogg"
+dest_files=["res://.godot/imported/DavidKBD - Pink Bloom Pack - 08 - Lost Spaceship's Signal.ogg-f090507f7b3b80dd7fd134ec77618479.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

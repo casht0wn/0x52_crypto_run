@@ -1,11 +1,14 @@
 # Attribution
 ## Collaborators
 
-### Role
-Person 1  
-Person 2  
-[Person w/ Link]()  
+### Made with <3 by
+casht0wn
 
+### Vaporwave Theme Concept
+Chris From Greece
+
+### Title Concept - "0x52: Crypto Run"
+Clarke
 
 ## Sourced / Unaffiliated
 ### Asset Type
@@ -14,6 +17,18 @@ Author: [Name]()
 Source: [Domain : webpage.html]()  
 License: [License]()
 
+### Audio/SFX
+#### Background Music
+Author: [DavidKBD](https://www.davidkbd.com/)  
+Source: [Pink Bloom Synthwave Music Pack: davidkbd.itch.io](https://davidkbd.itch.io/pink-bloom-synthwave-music-pack)  
+License: [CC By 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+#### Title Music
+Author: [AudioRells](https://pixabay.com/users/audiorells-43191573/)
+Source: [Outrun Neon Dreams 80s: pixabay.com](https://pixabay.com/music/synthwave-outrun-neon-dreams-80s-199668/)  
+License: [Pixabay Content License](https://pixabay.com/service/license-summary/)
+
+### Other
 #### Godot Engine Logo
 Author: Andrea Calabró  
 Source: [godotengine.org : press](https://godotengine.org/press/)  
