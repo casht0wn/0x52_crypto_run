@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dgq2skc7plxrm"]
+[gd_scene load_steps=18 format=3 uid="uid://dgq2skc7plxrm"]
 
 [ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/pause_menu_controller.gd" id="1_b4t6i"]
 [ext_resource type="Theme" uid="uid://u5qh1r677ec2" path="res://src/assets/neon-wave-theme/neon-wave.tres" id="1_b70l7"]
@@ -8,10 +8,21 @@
 [ext_resource type="PackedScene" uid="uid://cuxxwvwjcjfr" path="res://src/scenes/loading_screen/level_loading_screen.tscn" id="5_wkuxm"]
 [ext_resource type="Script" path="res://src/scenes/game_scene/configurable_sub_viewport.gd" id="6_0m78w"]
 [ext_resource type="Script" path="res://src/scenes/game_scene/input_display_label.gd" id="7_gcupl"]
+[ext_resource type="AudioStream" uid="uid://blp5tbp12ht1h" path="res://src/assets/audio/music/outrun-neon-dreams-80s-199668.mp3" id="7_mqg56"]
 [ext_resource type="Script" path="res://src/scripts/level_list_state_manager.gd" id="8_jsu8h"]
+[ext_resource type="AudioStream" uid="uid://bps2sdbq0g2r" path="res://src/assets/audio/music/jan-van-s-retro-kids-251813.mp3" id="8_s2lbe"]
+[ext_resource type="AudioStream" uid="uid://d3xwlcv65d341" path="res://src/assets/audio/music/retrowave-80s-electronic-retro-beat-257056.mp3" id="9_5ha3c"]
 [ext_resource type="PackedScene" uid="uid://doxxtjn54xtdr" path="res://src/scenes/overlaid_menus/game_won_menu.tscn" id="9_35uj8"]
 [ext_resource type="PackedScene" uid="uid://ch35y7cx21ll1" path="res://src/scenes/overlaid_menus/level_lost_menu.tscn" id="10_61535"]
+[ext_resource type="AudioStream" uid="uid://cs8cixeo2khle" path="res://src/assets/audio/music/password-infinity-123276.mp3" id="10_dagp3"]
 [ext_resource type="PackedScene" uid="uid://b4qcd486ffwk" path="res://src/scenes/overlaid_menus/level_won_menu.tscn" id="11_kqla4"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_aeavp"]
+stream_count = 4
+stream_0 = ExtResource("7_mqg56")
+stream_1 = ExtResource("8_s2lbe")
+stream_2 = ExtResource("9_5ha3c")
+stream_3 = ExtResource("10_dagp3")
 
 [node name="GameUI" type="Control"]
 layout_mode = 3
@@ -34,6 +45,7 @@ files = Array[String](["res://src/scenes/game_scene/levels/level_1.tscn"])
 directory = "res://src/scenes/game_scene/levels"
 
 [node name="BackgroundMusicPlayer" parent="." instance=ExtResource("4_lg3u4")]
+stream = SubResource("AudioStreamPlaylist_aeavp")
 bus = &"Master"
 
 [node name="LevelLoadingScreen" parent="." instance=ExtResource("5_wkuxm")]

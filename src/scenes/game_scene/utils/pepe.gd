@@ -6,8 +6,8 @@ extends CharacterBody2D
 @export var jeet_strength: float = 200.0
 
 @onready var sprite: AnimatedSprite2D = $Sprite
+@onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
-var level_lost_scene: PackedScene = load("res://src/scenes/overlaid_menus/level_lost_menu.tscn")
 func _physics_process(delta: float) -> void:
 	# Apply gravity
 	velocity.y += gravity * delta
@@ -27,12 +27,10 @@ func _physics_process(delta: float) -> void:
 		sprite.rotation = deg_to_rad(-5.0)
 
 	if position.y > get_viewport_rect().size.y:
-		_show_lose_screen()
+		die()
 
 	position.y += velocity.y * delta
 	move_and_slide()
 
-func _show_lose_screen() -> void:
-	if level_lost_scene:
-		var instance = level_lost_scene.instantiate()
-		get_tree().current_scene.add_child(instance)
+func die() -> void:
+	pass

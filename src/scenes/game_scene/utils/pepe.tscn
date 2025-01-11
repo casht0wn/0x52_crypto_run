@@ -3,29 +3,29 @@
 [ext_resource type="Script" path="res://src/scenes/game_scene/utils/pepe.gd" id="1_6xomm"]
 [ext_resource type="Texture2D" uid="uid://boxpaly3m6w5f" path="res://src/assets/images/BasedPepe_flying.png" id="2_gc1ud"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bdxy4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2keal"]
 atlas = ExtResource("2_gc1ud")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_stat5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5surc"]
 atlas = ExtResource("2_gc1ud")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lqsu6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxetq"]
 atlas = ExtResource("2_gc1ud")
-region = Rect2(64, 0, 32, 32)
+region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5kxbp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bdxy4")
+"texture": SubResource("AtlasTexture_2keal")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_stat5")
+"texture": SubResource("AtlasTexture_5surc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lqsu6")
+"texture": SubResource("AtlasTexture_qxetq")
 }],
 "loop": true,
 "name": &"default",
@@ -35,11 +35,10 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ckd4n"]
 radius = 12.0416
 
-[node name="Pepe" type="CharacterBody2D"]
+[node name="Pepe" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_6xomm")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_5kxbp")
 autoplay = "default"
 
