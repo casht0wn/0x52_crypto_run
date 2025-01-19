@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpqi0xllth5s8"]
+[gd_scene load_steps=8 format=3 uid="uid://dpqi0xllth5s8"]
 
 [ext_resource type="PackedScene" uid="uid://brqqdsoyxbhx7" path="res://src/scenes/credits/credits.tscn" id="1_1hsgb"]
 [ext_resource type="Theme" uid="uid://u5qh1r677ec2" path="res://src/assets/neon-wave-theme/neon-wave.tres" id="2_rhqck"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="3_qq4gi"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scripts/capture_focus.gd" id="4_41wmu"]
 [ext_resource type="AudioStream" uid="uid://cgcrvv0d1u5eb" path="res://src/assets/audio/music/retro-gaming-271301.mp3" id="5_0c820"]
+[ext_resource type="FontFile" uid="uid://cypl803w2n6ti" path="res://src/assets/fonts/Alien-Encounters-Regular.ttf" id="7_3x8n6"]
 
 [node name="EndCredits" instance=ExtResource("1_1hsgb")]
 theme = ExtResource("2_rhqck")
@@ -37,6 +38,75 @@ stretch_mode = 5
 [node name="ScrollContainer" parent="." index="3"]
 scroll_vertical = 0
 
+[node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
+text = "[center][font_size=48]Contributors[/font_size]
+
+[font_size=32]Made by[/font_size]
+casht0wn
+
+[font_size=32]Vaporwave Theme Concept[/font_size]
+Chris From Greece
+
+[font_size=32]Title Concept[/font_size]
+Clarke
+
+[font_size=48]Sourced / Unaffiliated[/font_size]
+
+[font_size=32]Audio/SFX[/font_size]
+
+[font_size=24]Background Music[/font_size]
+\"Pink Bloom Synthwave Music Pack\"  
+Author: [url=https://www.davidkbd.com/]DavidKBD[/url]  
+Source: [url=https://davidkbd.itch.io/pink-bloom-synthwave-music-pack]davidkbd.itch.io[/url]  
+License: [url=https://creativecommons.org/licenses/by/4.0/]CC By 4.0[/url]
+
+[font_size=24]Title Music[/font_size]
+\"Outrun Neon Dreams 80s\"  
+Author: [url=https://pixabay.com/users/audiorells-43191573/]AudioRells[/url]  
+Source: [url=https://pixabay.com/music/synthwave-outrun-neon-dreams-80s-199668/]pixabay.com[/url]  
+License: [url=https://pixabay.com/service/license-summary/]Pixabay Content License[/url]
+
+[font_size=24]UI SFX[/font_size]
+\"Classic UI SFX\"  
+Author: [url=https://chhoffmusic.itch.io/]Chhoff[/url]  
+Source: [url=https://chhoffmusic.itch.io/classic-ui-sfx]itch.io[/url]  
+
+[font_size=32]Fonts[/font_size]
+\"Outrun Future\"  
+Author: [url=https://comicfontsby.tehandeh.com/]Press Gang Stidios[/url]  
+Source: [url=https://www.dafont.com/outrun-future.font]dafont.com[/url]  
+
+\"Streamster\"  
+Author: [url=https://youssef-habchi.com/]Youssef Habchi[/url]  
+Source: [url=https://www.dafont.com/streamster.font]dafont.com[/url]
+
+\"Alien Encounters\"  
+Author: ShyFonts  
+Source: [url=https://www.dafont.com/alien-encounters.font]dafont.com[/url]
+
+[font_size=32]Other[/font_size]
+[font_size=24]Godot Engine Logo[/font_size]
+Author: Andrea Calabró  
+Source: [url=https://godotengine.org/press/]godotengine.org : press[/url]  
+License: [url=https://github.com/godotengine/godot/blob/master/LOGO_LICENSE.txt]CC BY 4.0 International[/url] 
+
+[font_size=48]Tools[/font_size]
+[font_size=24]Godot[/font_size]
+Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]  
+Source: [url=https://godotengine.org/]godotengine.org[/url]  
+License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url] 
+
+[font_size=24]Git[/font_size]
+Author: [url=https://github.com/torvalds]Linus Torvalds[/url]  
+Source: [url=https://git-scm.com/downloads]git-scm.com[/url]  
+License: [url=https://opensource.org/licenses/GPL-2.0]GNU General Public License version 2[/url]
+
+[font_size=24]Godot Game Template[/font_size]
+Author: [url=https://github.com/Maaack/Godot-Game-Template/graphs/contributors]Marek Belski and contributors[/url]  
+Source: [url=https://github.com/Maaack/Godot-Game-Template]github: Godot-Game-Template[/url]  
+License: [url=LICENSE.txt]MIT License[/url]  
+[/center]"
+
 [node name="CenterContainer" type="CenterContainer" parent="." index="4"]
 layout_mode = 0
 anchor_right = 1.0
@@ -48,7 +118,7 @@ mouse_filter = 2
 [node name="EndMessagePanel" type="Panel" parent="CenterContainer" index="0"]
 unique_name_in_owner = true
 visible = false
-custom_minimum_size = Vector2(360, 120)
+custom_minimum_size = Vector2(500, 200)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/EndMessagePanel" index="0"]
@@ -60,7 +130,7 @@ anchor_bottom = 1.0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Thanks for playing, $PEPE fam!"
+text = "Thanks for playing, $PEPE fam! 🧢🐸"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -81,6 +151,7 @@ custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("7_3x8n6")
 text = "Exit"
 
 [node name="MenuButton" type="Button" parent="CenterContainer/EndMessagePanel/VBoxContainer/CenterContainer/HBoxContainer" index="1"]
@@ -89,6 +160,7 @@ custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("7_3x8n6")
 text = "Menu"
 
 [connection signal="pressed" from="CenterContainer/EndMessagePanel/VBoxContainer/CenterContainer/HBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]

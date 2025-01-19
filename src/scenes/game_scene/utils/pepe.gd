@@ -7,6 +7,8 @@ extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
+@onready var coins: CPUParticles2D = $Coins
+@onready var bills: CPUParticles2D = $Bills
 
 @onready var level: Node2D = get_tree().get_first_node_in_group("Level")
 
@@ -21,6 +23,8 @@ func _physics_process(delta: float) -> void:
 
 	# Check for upward flap input
 	if Input.is_action_just_pressed("buy"):
+		bills.emitting = true
+		coins.emitting = true
 		velocity.y = -flap_strength
 
 	# Check for downward flap input
@@ -29,9 +33,9 @@ func _physics_process(delta: float) -> void:
 
 	# Make sprite 'bob' when flapping
 	if velocity.y > 0:
-		sprite.rotation = deg_to_rad(5.0)
+		sprite.rotation = lerpf(sprite.rotation,deg_to_rad(5.0),0.5)
 	else:
-		sprite.rotation = deg_to_rad(-5.0)
+		sprite.rotation = lerpf(sprite.rotation,deg_to_rad(-5.0),0.5)
 
 	if position.y > get_viewport_rect().size.y:
 		died.emit()

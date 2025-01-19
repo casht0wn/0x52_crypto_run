@@ -1,31 +1,49 @@
-[gd_scene load_steps=8 format=3 uid="uid://3nqpb6l207pr"]
+[gd_scene load_steps=13 format=3 uid="uid://3nqpb6l207pr"]
 
 [ext_resource type="Script" path="res://src/scenes/game_scene/utils/pepe.gd" id="1_6xomm"]
-[ext_resource type="Texture2D" uid="uid://boxpaly3m6w5f" path="res://src/assets/images/BasedPepe_flying.png" id="2_gc1ud"]
+[ext_resource type="Texture2D" uid="uid://chfcgnql1w1mm" path="res://src/assets/images/coins.png" id="2_q4e0l"]
+[ext_resource type="Texture2D" uid="uid://bdmkt4w8atevq" path="res://src/assets/images/bills.png" id="3_8uq50"]
+[ext_resource type="Texture2D" uid="uid://yho3u8rnio8" path="res://src/assets/images/BasedPepe_sprite.png" id="4_1kemx"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2keal"]
-atlas = ExtResource("2_gc1ud")
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_goohc"]
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_wh4b4"]
+offsets = PackedFloat32Array(0, 0.911638, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.909804, 0.909804, 0.909804, 1, 1, 1, 1, 0)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rjcbj"]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw3cw"]
+atlas = ExtResource("4_1kemx")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5surc"]
-atlas = ExtResource("2_gc1ud")
+[sub_resource type="AtlasTexture" id="AtlasTexture_youch"]
+atlas = ExtResource("4_1kemx")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qxetq"]
-atlas = ExtResource("2_gc1ud")
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqk68"]
+atlas = ExtResource("4_1kemx")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5kxbp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2keal")
+"texture": SubResource("AtlasTexture_xw3cw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5surc")
+"texture": SubResource("AtlasTexture_youch")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qxetq")
+"texture": SubResource("AtlasTexture_gqk68")
 }],
 "loop": true,
 "name": &"default",
@@ -37,6 +55,50 @@ radius = 12.0416
 
 [node name="Pepe" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_6xomm")
+
+[node name="Coins" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_goohc")
+emitting = false
+amount = 4
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.5
+texture = ExtResource("2_q4e0l")
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector2(-1, -2)
+initial_velocity_min = 100.0
+initial_velocity_max = 250.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+damping_min = 10.0
+damping_max = 100.0
+color_ramp = SubResource("Gradient_wh4b4")
+anim_speed_min = 32.0
+anim_speed_max = 32.0
+
+[node name="Bills" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_rjcbj")
+emitting = false
+amount = 4
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.5
+texture = ExtResource("3_8uq50")
+emission_shape = 1
+emission_sphere_radius = 10.0
+direction = Vector2(-1, -2)
+initial_velocity_min = 150.0
+initial_velocity_max = 250.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+damping_min = 10.0
+damping_max = 100.0
+color_ramp = SubResource("Gradient_wh4b4")
+anim_speed_min = 32.0
+anim_speed_max = 32.0
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5kxbp")

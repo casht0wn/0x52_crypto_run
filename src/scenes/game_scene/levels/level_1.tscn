@@ -41,6 +41,7 @@ shader_parameter/vignette_opacity = 0.5
 
 [node name="Level" type="Node2D" groups=["Level"]]
 script = ExtResource("1_uusph")
+vertical_scroll = 0.1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vqorr")

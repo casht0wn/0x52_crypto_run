@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://bh2gj03hg6v4r" path="res://src/assets/neon-wave-theme/polentical_neon/Polentical Neon Regular.ttf" id="1"]
 [ext_resource type="Texture2D" uid="uid://6wa5oaqt2vmq" path="res://src/assets/neon-wave-theme/neon-wave-theme.png" id="2"]
+[ext_resource type="FontFile" uid="uid://cypl803w2n6ti" path="res://src/assets/fonts/Alien-Encounters-Regular.ttf" id="3_npj64"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mj3ns"]
 texture = ExtResource("2")
@@ -624,60 +625,8 @@ expand_margin_right = 12.0
 expand_margin_bottom = 13.0
 region_rect = Rect2(367, 39, 283, 303)
 
-[sub_resource type="FontFile" id="9"]
-fallbacks = Array[Font]([ExtResource("1")])
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/24/0 = Vector2(0, 0)
-cache/0/24/0/ascent = 0.0
-cache/0/24/0/descent = 0.0
-cache/0/24/0/underline_position = 0.0
-cache/0/24/0/underline_thickness = 0.0
-cache/0/24/0/scale = 1.0
-cache/0/24/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/24/0/kerning_overrides/24/0 = Vector2(0, 0)
-cache/0/64/0/ascent = 0.0
-cache/0/64/0/descent = 0.0
-cache/0/64/0/underline_position = 0.0
-cache/0/64/0/underline_thickness = 0.0
-cache/0/64/0/scale = 1.0
-cache/0/23/0/ascent = 0.0
-cache/0/23/0/descent = 0.0
-cache/0/23/0/underline_position = 0.0
-cache/0/23/0/underline_thickness = 0.0
-cache/0/23/0/scale = 1.0
-cache/0/22/0/ascent = 0.0
-cache/0/22/0/descent = 0.0
-cache/0/22/0/underline_position = 0.0
-cache/0/22/0/underline_thickness = 0.0
-cache/0/22/0/scale = 1.0
-cache/0/21/0/ascent = 0.0
-cache/0/21/0/descent = 0.0
-cache/0/21/0/underline_position = 0.0
-cache/0/21/0/underline_thickness = 0.0
-cache/0/21/0/scale = 1.0
-cache/0/20/0/ascent = 0.0
-cache/0/20/0/descent = 0.0
-cache/0/20/0/underline_position = 0.0
-cache/0/20/0/underline_thickness = 0.0
-cache/0/20/0/scale = 1.0
-cache/0/19/0/ascent = 0.0
-cache/0/19/0/descent = 0.0
-cache/0/19/0/underline_position = 0.0
-cache/0/19/0/underline_thickness = 0.0
-cache/0/19/0/scale = 1.0
-cache/0/18/0/ascent = 0.0
-cache/0/18/0/descent = 0.0
-cache/0/18/0/underline_position = 0.0
-cache/0/18/0/underline_thickness = 0.0
-cache/0/18/0/scale = 1.0
-
 [resource]
-default_font = SubResource("9")
+default_font = ExtResource("3_npj64")
 default_font_size = 20
 AcceptDialog/styles/panel = SubResource("StyleBoxTexture_mj3ns")
 Button/colors/font_color = Color(0.752941, 0.992157, 0.988235, 1)

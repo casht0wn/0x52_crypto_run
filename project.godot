@@ -14,7 +14,6 @@ config/name="0x52"
 config/description="Ride the wave of neon-soaked markets in this pulse-pounding, synthwave-inspired climb to the moon! Play as Based Pepe and push the candlestick charts ever higher while dodging volatile obstacles and navigating the increasingly steep climb. Can you handle the heat of the bull run and keep the charts in the green? Test your reflexes, master the climb, and stake your claim in this ultimate crypto adventure!"
 run/main_scene="res://src/scenes/opening/opening_with_logo.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
 
 [autoload]
@@ -65,4 +64,3 @@ copy_path="res://src"
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)

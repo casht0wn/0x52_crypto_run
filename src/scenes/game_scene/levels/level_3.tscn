@@ -1,0 +1,85 @@
+[gd_scene load_steps=14 format=3 uid="uid://bn7p0dvdhakoe"]
+
+[ext_resource type="Script" path="res://src/scenes/game_scene/levels/level.gd" id="1_gxg0y"]
+[ext_resource type="Texture2D" uid="uid://biumuxvefgpws" path="res://src/assets/images/backgrounds/vaporwave-background-11.png" id="2_8spil"]
+[ext_resource type="Script" path="res://src/scenes/game_scene/utils/stripe_manager.gd" id="3_rb7jk"]
+[ext_resource type="PackedScene" uid="uid://btg4knfkp86wu" path="res://src/scenes/game_scene/utils/stripe.tscn" id="4_6cn7r"]
+[ext_resource type="Script" path="res://src/scenes/game_scene/utils/pipe_manager.gd" id="5_cxghi"]
+[ext_resource type="PackedScene" uid="uid://b4dmcvoiv5vku" path="res://src/scenes/game_scene/utils/pipe.tscn" id="6_m7yu6"]
+[ext_resource type="Script" path="res://src/scenes/game_scene/utils/candle_manager.gd" id="7_2hk7v"]
+[ext_resource type="PackedScene" uid="uid://c6jsoi5gp3wbq" path="res://src/scenes/game_scene/utils/candlestick.tscn" id="8_4pak0"]
+[ext_resource type="Shader" path="res://src/shaders/crt.gdshader" id="9_xogmr"]
+[ext_resource type="PackedScene" uid="uid://3nqpb6l207pr" path="res://src/scenes/game_scene/utils/pepe.tscn" id="10_40331"]
+[ext_resource type="PackedScene" uid="uid://cuqwv8nf0cnt5" path="res://src/scenes/game_scene/utils/score_counter.tscn" id="11_3yqf3"]
+
+[sub_resource type="Environment" id="Environment_vqorr"]
+glow_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tsfv6"]
+shader = ExtResource("9_xogmr")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.4
+shader_parameter/scanlines_width = 0.25
+shader_parameter/grille_opacity = 0.3
+shader_parameter/resolution = Vector2(1920, 1080)
+shader_parameter/pixelate = false
+shader_parameter/roll = true
+shader_parameter/roll_speed = 1.0
+shader_parameter/roll_size = 25.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.01
+shader_parameter/noise_opacity = 0.2
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/aberration = 0.01
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.5
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.3
+shader_parameter/vignette_opacity = 0.5
+
+[node name="Level" type="Node2D" groups=["Level"]]
+script = ExtResource("1_gxg0y")
+horizontal_scroll = 300.0
+vertical_scroll = 0.3
+obstacle_spacing = 400.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vqorr")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.666, 0.666)
+texture = ExtResource("2_8spil")
+
+[node name="Stripes" type="Node2D" parent="."]
+script = ExtResource("3_rb7jk")
+stripe_scene = ExtResource("4_6cn7r")
+
+[node name="Obstacles" type="Node2D" parent="."]
+script = ExtResource("5_cxghi")
+pipe_scene = ExtResource("6_m7yu6")
+
+[node name="Candles" type="Node2D" parent="."]
+script = ExtResource("7_2hk7v")
+candlestick_scene = ExtResource("8_4pak0")
+trail_spacing = 30.0
+
+[node name="CRT" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_tsfv6")
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Pepe" parent="." instance=ExtResource("10_40331")]
+unique_name_in_owner = true
+position = Vector2(640, 360)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreCounter" parent="CanvasLayer" instance=ExtResource("11_3yqf3")]
+offset_right = -640.0
+offset_bottom = 16.0
+scale = Vector2(2, 2)
+alignment = 2
