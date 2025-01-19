@@ -1,12 +1,37 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2ascmlso8lf"]
+[gd_scene load_steps=6 format=3 uid="uid://c2ascmlso8lf"]
 
 [ext_resource type="PackedScene" uid="uid://b5cd6sa8qq4vc" path="res://addons/maaacks_game_template/base/scenes/overlaid_menu/menus/pause_menu.tscn" id="1_luulf"]
 [ext_resource type="Theme" uid="uid://u5qh1r677ec2" path="res://src/assets/neon-wave-theme/neon-wave.tres" id="2_7r7qy"]
 [ext_resource type="Script" path="res://src/scenes/overlaid_menus/pause_menu.gd" id="2_q7hh4"]
 [ext_resource type="PackedScene" uid="uid://cus38cr0a8ck2" path="res://src/scenes/overlaid_menus/mini_options_overlaid_menu.tscn" id="3_woar6"]
+[ext_resource type="FontFile" uid="uid://cypl803w2n6ti" path="res://src/assets/fonts/Alien-Encounters-Regular.ttf" id="5_mitq3"]
 
 [node name="PauseMenu" instance=ExtResource("1_luulf")]
 theme = ExtResource("2_7r7qy")
 script = ExtResource("2_q7hh4")
 options_packed_scene = ExtResource("3_woar6")
 main_menu_scene = "res://src/scenes/menus/main_menu/main_menu_with_animations.tscn"
+
+[node name="CloseButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="0"]
+theme_override_fonts/font = ExtResource("5_mitq3")
+
+[node name="RestartButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="1"]
+theme_override_fonts/font = ExtResource("5_mitq3")
+
+[node name="OptionsButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="2"]
+theme_override_fonts/font = ExtResource("5_mitq3")
+
+[node name="MainMenuButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="3"]
+theme_override_fonts/font = ExtResource("5_mitq3")
+
+[node name="ExitButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="4"]
+theme_override_fonts/font = ExtResource("5_mitq3")
+
+[node name="ConfirmRestart" parent="." index="2"]
+size = Vector2i(300, 100)
+
+[node name="ConfirmMainMenu" parent="." index="3"]
+size = Vector2i(300, 100)
+
+[node name="ConfirmExit" parent="." index="4"]
+size = Vector2i(300, 100)

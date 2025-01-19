@@ -1,9 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4qcd486ffwk"]
+[gd_scene load_steps=5 format=3 uid="uid://b4qcd486ffwk"]
 
 [ext_resource type="PackedScene" uid="uid://y3vtx0e0shv4" path="res://addons/maaacks_game_template/extras/scenes/overlaid_menus/level_won_menu.tscn" id="1_ltv30"]
 [ext_resource type="Theme" uid="uid://u5qh1r677ec2" path="res://src/assets/neon-wave-theme/neon-wave.tres" id="2_2tge3"]
 [ext_resource type="Script" path="res://src/scenes/overlaid_menus/level_won_menu.gd" id="2_8xa1v"]
+[ext_resource type="FontFile" uid="uid://cypl803w2n6ti" path="res://src/assets/fonts/Alien-Encounters-Regular.ttf" id="4_5idld"]
 
 [node name="LevelWonMenu" instance=ExtResource("1_ltv30")]
 theme = ExtResource("2_2tge3")
 script = ExtResource("2_8xa1v")
+
+[node name="MainMenuButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="0"]
+theme_override_fonts/font = ExtResource("4_5idld")
+
+[node name="RestartButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="1"]
+theme_override_fonts/font = ExtResource("4_5idld")
+
+[node name="CloseButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="2"]
+theme_override_fonts/font = ExtResource("4_5idld")
+
+[node name="ConfirmMainMenu" parent="." index="2"]
+size = Vector2i(300, 100)

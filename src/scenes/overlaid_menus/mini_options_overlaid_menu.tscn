@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cus38cr0a8ck2"]
+[gd_scene load_steps=5 format=3 uid="uid://cus38cr0a8ck2"]
 
 [ext_resource type="PackedScene" uid="uid://cikf3o5omnunl" path="res://addons/maaacks_game_template/base/scenes/overlaid_menu/menus/mini_options_overlaid_menu.tscn" id="1_c8pr4"]
 [ext_resource type="PackedScene" uid="uid://d1204n45t1qk1" path="res://src/scenes/menus/options_menu/mini_options_menu_with_reset.tscn" id="2_4pbax"]
 [ext_resource type="Theme" uid="uid://u5qh1r677ec2" path="res://src/assets/neon-wave-theme/neon-wave.tres" id="2_j46wt"]
+[ext_resource type="FontFile" uid="uid://cypl803w2n6ti" path="res://src/assets/fonts/Alien-Encounters-Regular.ttf" id="4_xb0dj"]
 
 [node name="MiniOptionsOverlaidMenu" instance=ExtResource("1_c8pr4")]
 theme = ExtResource("2_j46wt")
 menu_scene = ExtResource("2_4pbax")
+
+[node name="CloseButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="0"]
+theme_override_fonts/font = ExtResource("4_xb0dj")

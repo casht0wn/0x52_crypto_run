@@ -2,49 +2,58 @@
 
 [ext_resource type="PackedScene" uid="uid://t2dui8ppm3a4" path="res://addons/maaacks_game_template/base/scenes/credits/credits.tscn" id="1_ho6k8"]
 [ext_resource type="Script" path="res://src/scenes/credits/credits.gd" id="2_a5ctd"]
-[ext_resource type="FontFile" uid="uid://n5y4rx3x7snr" path="res://src/assets/fonts/Alien-Encounters-Solid-Regular.ttf" id="3_prwti"]
+[ext_resource type="FontFile" uid="uid://bh2gj03hg6v4r" path="res://src/assets/neon-wave-theme/polentical_neon/Polentical Neon Regular.ttf" id="3_hipbf"]
 
 [node name="Credits" instance=ExtResource("1_ho6k8")]
 script = ExtResource("2_a5ctd")
 attribution_file_path = "res://src/ATTRIBUTION.md"
 
 [node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
-theme_override_fonts/normal_font = ExtResource("3_prwti")
-text = "[center][font_size=48]Collaborators[/font_size]
+theme_override_fonts/normal_font = ExtResource("3_hipbf")
+text = "[center][font_size=48]Contributors[/font_size]
 
-[font_size=32]Made with <3 by[/font_size]
+[font_size=32]Made by[/font_size]
 casht0wn
 
 [font_size=32]Vaporwave Theme Concept[/font_size]
 Chris From Greece
 
-[font_size=32]Title Concept - \"0x52: Crypto Run\"[/font_size]
+[font_size=32]Title Concept[/font_size]
 Clarke
 
 [font_size=48]Sourced / Unaffiliated[/font_size]
-[font_size=32]Asset Type[/font_size]
-[font_size=24]Use Case[/font_size]
-Author: [url=]Name[/url]  
-Source: [url=]Domain : webpage.html[/url]  
-License: [url=]License[/url]
 
 [font_size=32]Audio/SFX[/font_size]
+
 [font_size=24]Background Music[/font_size]
+\"Pink Bloom Synthwave Music Pack\"  
 Author: [url=https://www.davidkbd.com/]DavidKBD[/url]  
-Source: [url=https://davidkbd.itch.io/pink-bloom-synthwave-music-pack]Pink Bloom Synthwave Music Pack: davidkbd.itch.io[/url]  
+Source: [url=https://davidkbd.itch.io/pink-bloom-synthwave-music-pack]davidkbd.itch.io[/url]  
 License: [url=https://creativecommons.org/licenses/by/4.0/]CC By 4.0[/url]
 
 [font_size=24]Title Music[/font_size]
+\"Outrun Neon Dreams 80s\"  
 Author: [url=https://pixabay.com/users/audiorells-43191573/]AudioRells[/url]  
-Source: [url=https://pixabay.com/music/synthwave-outrun-neon-dreams-80s-199668/]Outrun Neon Dreams 80s: pixabay.com[/url]  
+Source: [url=https://pixabay.com/music/synthwave-outrun-neon-dreams-80s-199668/]pixabay.com[/url]  
 License: [url=https://pixabay.com/service/license-summary/]Pixabay Content License[/url]
 
-[font_size=32]Fonts[/font_size]
-[font_size=24]<span style=\"Outrun Future\">Outrun Future</Span>[/font_size]
-[url=https://comicfontsby.tehandeh.com/]Press Gang Stidios[/url]
+[font_size=24]UI SFX[/font_size]
+\"Classic UI SFX\"  
+Author: [url=https://chhoffmusic.itch.io/]Chhoff[/url]  
+Source: [url=https://chhoffmusic.itch.io/classic-ui-sfx]itch.io[/url]  
 
-[font_size=24]<span style=\"Streamster\">Streamster</Span>[/font_size]
-[url=https://youssef-habchi.com/]Youssef Habchi[/url]
+[font_size=32]Fonts[/font_size]
+\"Outrun Future\"  
+Author: [url=https://comicfontsby.tehandeh.com/]Press Gang Stidios[/url]  
+Source: [url=https://www.dafont.com/outrun-future.font]dafont.com[/url]  
+
+\"Streamster\"  
+Author: [url=https://youssef-habchi.com/]Youssef Habchi[/url]  
+Source: [url=https://www.dafont.com/streamster.font]dafont.com[/url]
+
+\"Alien Encounters\"  
+Author: ShyFonts  
+Source: [url=https://www.dafont.com/alien-encounters.font]dafont.com[/url]
 
 [font_size=32]Other[/font_size]
 [font_size=24]Godot Engine Logo[/font_size]

@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://doxxtjn54xtdr"]
+[gd_scene load_steps=5 format=3 uid="uid://doxxtjn54xtdr"]
 
 [ext_resource type="PackedScene" uid="uid://4brssbq1ghsw" path="res://addons/maaacks_game_template/extras/scenes/overlaid_menus/game_won_menu.tscn" id="1_1uhqc"]
 [ext_resource type="Theme" uid="uid://u5qh1r677ec2" path="res://src/assets/neon-wave-theme/neon-wave.tres" id="2_ixmm4"]
 [ext_resource type="Script" path="res://src/scenes/overlaid_menus/game_won_menu.gd" id="2_yvwx0"]
+[ext_resource type="FontFile" uid="uid://cypl803w2n6ti" path="res://src/assets/fonts/Alien-Encounters-Regular.ttf" id="4_a5r8y"]
 
 [node name="GameWonMenu" instance=ExtResource("1_1uhqc")]
 theme = ExtResource("2_ixmm4")
 script = ExtResource("2_yvwx0")
+
+[node name="CloseButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/MenuButtonsMargin/MenuButtons" index="2"]
+theme_override_fonts/font = ExtResource("4_a5r8y")

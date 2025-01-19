@@ -1,8 +1,7 @@
-[gd_resource type="Theme" load_steps=85 format=3 uid="uid://u5qh1r677ec2"]
+[gd_resource type="Theme" load_steps=84 format=3 uid="uid://u5qh1r677ec2"]
 
 [ext_resource type="FontFile" uid="uid://bh2gj03hg6v4r" path="res://src/assets/neon-wave-theme/polentical_neon/Polentical Neon Regular.ttf" id="1"]
 [ext_resource type="Texture2D" uid="uid://6wa5oaqt2vmq" path="res://src/assets/neon-wave-theme/neon-wave-theme.png" id="2"]
-[ext_resource type="FontFile" uid="uid://cypl803w2n6ti" path="res://src/assets/fonts/Alien-Encounters-Regular.ttf" id="3_npj64"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mj3ns"]
 texture = ExtResource("2")
@@ -626,7 +625,7 @@ expand_margin_bottom = 13.0
 region_rect = Rect2(367, 39, 283, 303)
 
 [resource]
-default_font = ExtResource("3_npj64")
+default_font = ExtResource("1")
 default_font_size = 20
 AcceptDialog/styles/panel = SubResource("StyleBoxTexture_mj3ns")
 Button/colors/font_color = Color(0.752941, 0.992157, 0.988235, 1)
