@@ -1,32 +1,48 @@
 # Attribution
-## Collaborators
+## Contributors
 
-### Made with <3 by
+### Made by
 casht0wn
 
 ### Vaporwave Theme Concept
 Chris From Greece
 
-### Title Concept - "0x52: Crypto Run"
+### Title Concept
 Clarke
 
 ## Sourced / Unaffiliated
-### Asset Type
-#### Use Case
-Author: [Name]()  
-Source: [Domain : webpage.html]()  
-License: [License]()
 
 ### Audio/SFX
+
 #### Background Music
+"Pink Bloom Synthwave Music Pack"  
 Author: [DavidKBD](https://www.davidkbd.com/)  
-Source: [Pink Bloom Synthwave Music Pack: davidkbd.itch.io](https://davidkbd.itch.io/pink-bloom-synthwave-music-pack)  
+Source: [davidkbd.itch.io](https://davidkbd.itch.io/pink-bloom-synthwave-music-pack)  
 License: [CC By 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 #### Title Music
-Author: [AudioRells](https://pixabay.com/users/audiorells-43191573/)
-Source: [Outrun Neon Dreams 80s: pixabay.com](https://pixabay.com/music/synthwave-outrun-neon-dreams-80s-199668/)  
+"Outrun Neon Dreams 80s"  
+Author: [AudioRells](https://pixabay.com/users/audiorells-43191573/)  
+Source: [pixabay.com](https://pixabay.com/music/synthwave-outrun-neon-dreams-80s-199668/)  
 License: [Pixabay Content License](https://pixabay.com/service/license-summary/)
+
+#### UI SFX
+"Classic UI SFX"  
+Author: [Chhoff](https://chhoffmusic.itch.io/)  
+Source: [itch.io](https://chhoffmusic.itch.io/classic-ui-sfx)  
+
+### Fonts
+"Outrun Future"  
+Author: [Press Gang Stidios](https://comicfontsby.tehandeh.com/)  
+Source: [dafont.com](https://www.dafont.com/outrun-future.font)  
+
+"Streamster"  
+Author: [Youssef Habchi](https://youssef-habchi.com/)  
+Source: [dafont.com](https://www.dafont.com/streamster.font)
+
+"Alien Encounters"  
+Author: ShyFonts  
+Source: [dafont.com](https://www.dafont.com/alien-encounters.font)
 
 ### Other
 #### Godot Engine Logo

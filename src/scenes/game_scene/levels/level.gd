@@ -16,7 +16,7 @@ func _process(_delta: float) -> void:
 	# Example of updating the score
 	score += 1
 	update_score()
-	if score >= 1000000:
+	if score >= 10000000:
 		winner()
 
 func update_score():

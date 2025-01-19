@@ -56,7 +56,6 @@ directory = "res://src/scenes/game_scene/levels"
 
 [node name="BackgroundMusicPlayer" parent="." instance=ExtResource("4_lg3u4")]
 stream = SubResource("AudioStreamPlaylist_aeavp")
-bus = &"Master"
 
 [node name="LevelLoadingScreen" parent="." instance=ExtResource("5_wkuxm")]
 visible = false

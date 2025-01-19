@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cc37235kj4384"]
+[gd_scene load_steps=4 format=3 uid="uid://cc37235kj4384"]
 
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scripts/ui_sound_controller.gd" id="1_dmagn"]
+[ext_resource type="AudioStream" uid="uid://do3mt52307k3y" path="res://src/assets/audio/sfx/Classic UI SFX - Short - High #7.wav" id="2_ihch5"]
+[ext_resource type="AudioStream" uid="uid://c0odwkey5m0u1" path="res://src/assets/audio/sfx/Classic UI SFX - Short - High #22.wav" id="3_vqbau"]
 
 [node name="ProjectUISoundController" type="Node"]
 script = ExtResource("1_dmagn")
+button_hovered = ExtResource("2_ihch5")
+button_pressed = ExtResource("3_vqbau")
