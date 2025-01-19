@@ -1,9 +1,5 @@
 extends Node2D
 
-@export var horizontal_scroll: float = 250.0
-@export var vertical_scroll: float = 0.0
-@export var obstacle_spacing: float = 500.0
-
 @onready var score_counter = $CanvasLayer/ScoreCounter
 @onready var obstacle_manager = $Obstacles
 @onready var candle_manager = $Candles
@@ -17,14 +13,7 @@ var win_score: int = 0
 
 func _ready():
 	level_state = GameState.get_level_state(scene_file_path)
-	var level_id = GameState.get_current_level() + 1
-	# Set scroll for current level
-	obstacle_manager.vertical_scroll_speed = vertical_scroll
-	obstacle_manager.base_scroll_speed = horizontal_scroll
-	obstacle_manager.pipe_spacing = obstacle_spacing
-	candle_manager.vertical_scroll_speed = vertical_scroll
-	# Set win score
-	win_score = level_id * 10000
+	win_score = (GameState.get_current_level() + 1) * 10000
 	update_score()
 
 func _process(_delta: float) -> void:

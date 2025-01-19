@@ -15,7 +15,8 @@ extends CharacterBody2D
 signal died
 
 func _ready() -> void:
-	connect("died", level.game_over)
+	if level:
+		connect("died", level.game_over)
 
 func _physics_process(delta: float) -> void:
 	# Apply gravity

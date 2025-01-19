@@ -41,8 +41,6 @@ shader_parameter/vignette_opacity = 0.5
 
 [node name="Level" type="Node2D" groups=["Level"]]
 script = ExtResource("1_b8wqj")
-horizontal_scroll = 300.0
-vertical_scroll = 0.2
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vqorr")
@@ -60,11 +58,17 @@ stripe_scene = ExtResource("4_4gmpf")
 [node name="Obstacles" type="Node2D" parent="."]
 script = ExtResource("5_hb46n")
 pipe_scene = ExtResource("6_cyxx6")
+base_scroll_speed = 300.0
+height_increase_rate = 0.7
+gap_size = 200.0
+vertical_scroll_acceleration = 0.7
 
 [node name="Candles" type="Node2D" parent="."]
 script = ExtResource("7_em4bn")
 candlestick_scene = ExtResource("8_rjy2y")
 trail_spacing = 30.0
+base_scroll_speed = 300.0
+vertical_scroll_acceleration = 0.7
 
 [node name="CRT" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_tsfv6")

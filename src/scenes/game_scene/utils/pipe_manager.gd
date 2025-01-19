@@ -12,7 +12,7 @@ extends Node2D
 var elapsed_distance: float = 0.0
 var pipes: Array[Node2D] = []
 var average_pipe_height: float = 200.0 # Initial average height of pipes
-var vertical_scroll_speed: float = 0.0 # Initial vertical scroll speed
+var vertical_scroll_speed: float = 3.0 # Initial vertical scroll speed
 
 func _process(delta: float) -> void:
 	# Adjust scroll speed based on player's vertical velocity
@@ -46,7 +46,7 @@ func spawn_pipe() -> void:
 	var bottom_pipe = pipe_scene.instantiate() as Node2D
 
 	# Calculate the gap position and size
-	var gap_position = average_pipe_height + randi_range(-150, 150)
+	var gap_position = average_pipe_height + randi_range(-200, 200)
 	var gap_variation = randi_range(-20, 200)
 	var actual_gap_size = gap_size + gap_variation
 

@@ -41,7 +41,6 @@ shader_parameter/vignette_opacity = 0.5
 
 [node name="Level" type="Node2D" groups=["Level"]]
 script = ExtResource("1_uusph")
-vertical_scroll = 0.1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vqorr")
@@ -59,6 +58,7 @@ stripe_scene = ExtResource("3_34daa")
 [node name="Obstacles" type="Node2D" parent="."]
 script = ExtResource("4_ux2tf")
 pipe_scene = ExtResource("5_euhua")
+gap_size = 200.0
 
 [node name="Candles" type="Node2D" parent="."]
 script = ExtResource("6_vvpej")
