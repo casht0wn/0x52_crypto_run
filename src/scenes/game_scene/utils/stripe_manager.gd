@@ -13,16 +13,19 @@ extends Node2D
 var elapsed_distance: float = 0.0
 var stripes: Array[Node2D] = []
 
+func _ready():
+	base_scroll_speed = get_viewport().size.y * speed_reduction_rate
+
 func _process(delta: float) -> void:
 	# Move all stripes downward
 	for stripe in stripes:
-		stripe.position.y += stripe.scroll_speed * delta
-		stripe.scroll_speed *= speed_reduction_rate
-		stripe.amplitude *= amplitude_reduction_rate
-		stripe.line_width *= width_increase_rate
+		stripe.position.y += stripe.scroll_speed * delta # Move the stripe down
+		stripe.scroll_speed *= speed_reduction_rate		 # Reduce the stripe's speed
+		stripe.amplitude *= amplitude_reduction_rate	 # Reduce the stripe's amplitude
+		stripe.line_width *= width_increase_rate		 # Increase the stripe's width
 
 		# Remove stripes that move off-screen
-		if stripe.position.y > 720:
+		if stripe.position.y > get_viewport().size.y + 100 || stripe.amplitude < 0.00001:
 			stripes.erase(stripe)
 			stripe.queue_free()
 
